@@ -6,12 +6,12 @@ body {
     padding: 0px 0px 0px 15px;
 }
 
-.sidebar a {
+a {
     color: black;
     text-decoration: none;
 }
 
-.sidebar a:hover {
+a:hover {
     color: #0088C3;
 }
 
@@ -64,12 +64,12 @@ body {
     text-align: center;
 }
 
-.posts a {
-
-}
-
 .posts > h1 {
     margin-top: 0px;
+}
+
+.posts h2 {
+    margin: 0px;
 }
 
 .posts ul {
@@ -80,3 +80,21 @@ body {
     list-style: none;
 }
 
+.posts li .date {
+    font-family: source-sans-pro, sans-serif;
+    float: right;
+    text-transform: uppercase;
+    font-weight: light;
+    color: #99CFE7;
+}
+
+.posts li .title {
+    font-family: source-sans-pro, sans-serif;
+    font-size: 20px;
+    color: #33A0CE;
+    font-weight: regular;
+}
+
+.posts li .title:hover {
+    color: #0088C3;
+ }

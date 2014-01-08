@@ -6,7 +6,7 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+        <script src="//use.edgefonts.net/source-sans-pro,neuton.js"></script>
         
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -22,7 +22,7 @@
         <div class="site pure-g-r">
             <div class="sidebar pure-u-1-6">
                 <div class="photo">
-                    <img src="http://placehold.it/350x350">
+                    <img src="{{ site.gravatar_url }}?s=250" />
                 </div>
 
                 <div class="title">
@@ -31,10 +31,16 @@
                 </div>
 
                 <div class="social">
-                    <a href="#"><i class="fa fa-github"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-rss"></i></a>
+                    <a href="http://www.github.com/{{ site.github }}" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="http://www.twitter.com/{{ site.twitter}}" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="http://www.linkedin.com/in/{{ site.linkedin }}" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank"><i class="fa fa-rss"></i></a>
                 </div>
 
                 <ul class="menu">
