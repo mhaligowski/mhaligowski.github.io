@@ -3,7 +3,7 @@ body {
 }
 
 .content > div {
-    padding: 0px 0px 0px 15px;
+    padding: 0px 40px;
 }
 
 a {
@@ -66,6 +66,7 @@ a:hover {
 
 .posts > h1 {
     margin-top: 0px;
+    font-family: source-sans-pro, sans-serif;
 }
 
 .posts h2 {
@@ -97,4 +98,24 @@ a:hover {
 
 .posts li .title:hover {
     color: #0088C3;
+ }
+
+ .post_single h2 {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: bolder;
+    margin: 0px;
+ }
+
+ .post_single .meta {
+    margin: 0px;
+ }
+
+ .post_single p {
+    font-family: neuton, serif;
+    font-size: 20px;
+    line-height: 160%;
+ }
+
+ .post_single a {
+    color: #33A0CE;
  }
