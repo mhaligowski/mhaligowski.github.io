@@ -1,18 +1,37 @@
 body {
     padding: 15px;
+    line-height: 160%;
+}
+
+p {
+    font-family: neuton, serif;
+    font-size: 20px;
+
+}
+
+h1, h2 {
+    font-family: source-sans-pro, sans-serif;
 }
 
 .content > div {
-    padding: 0px 40px;
+    padding: 0px 50px;
 }
 
 a {
-    color: black;
+    color: #33A0CE;
     text-decoration: none;
 }
 
 a:hover {
     color: #0088C3;
+}
+
+.sidebar {
+    line-height: 100%;
+}
+
+.sidebar a {
+    color: black;
 }
 
 .sidebar .photo {
@@ -64,15 +83,6 @@ a:hover {
     text-align: center;
 }
 
-.posts > h1 {
-    margin-top: 0px;
-    font-family: source-sans-pro, sans-serif;
-}
-
-.posts h2 {
-    margin: 0px;
-}
-
 .posts ul {
     padding: 0px;    
 }
@@ -92,7 +102,6 @@ a:hover {
 .posts li .title {
     font-family: source-sans-pro, sans-serif;
     font-size: 20px;
-    color: #33A0CE;
     font-weight: regular;
 }
 
@@ -100,22 +109,11 @@ a:hover {
     color: #0088C3;
  }
 
- .post_single h2 {
-    font-family: source-sans-pro, sans-serif;
-    font-weight: bolder;
-    margin: 0px;
- }
-
  .post_single .meta {
     margin: 0px;
  }
 
  .post_single p {
-    font-family: neuton, serif;
     font-size: 20px;
     line-height: 160%;
- }
-
- .post_single a {
-    color: #33A0CE;
  }
