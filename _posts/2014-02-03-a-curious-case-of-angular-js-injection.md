@@ -2,6 +2,7 @@
 layout: post
 title: "A curious case of dependency injection in Angular JS"
 date: 2014-02-03
+tags: blog
 ---
 
 I've been working on my [AngularJS](http://angularjs.org/) application for nearly half a year now (quite intensively for the first four months), when I decided that I want to run it somewhere else except for my local laptop. The solution consisted of two separate layers: REST service in Java (no persistance yet) and a nice AngularJS web app. The deployment of the backend worked like a charm - I had no need for external applications yet, I had continuous testing set on [Travis CI](https://travis-ci.org/), all I had to do was to add one line to automatic Heroku deployment.

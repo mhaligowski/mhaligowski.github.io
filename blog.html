@@ -6,7 +6,7 @@ title: Mateusz Haligowski | blog
     <h1>Blog posts</h1>
     
     <ul>
-    {% for post in site.posts %}
+    {% for post in site.tags.blog %}
         <li>
             <span class="date">{{ post.date | date_to_string }}</span>
             <a href="{{ post.url }}" class="title">{{ post.title }}</a>

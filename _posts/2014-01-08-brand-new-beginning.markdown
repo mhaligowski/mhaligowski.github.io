@@ -2,6 +2,7 @@
 layout: post
 title:  "Brand new beginning"
 date:   2014-01-08
+tags:   blog
 ---
 
 As a New Year resolution and a part of personal development I set up a GitHub Page ("blogging the hacker way") intending to be my blog, and also contain some information about my projects, talks etc.
