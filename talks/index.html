@@ -11,7 +11,7 @@ category: talk
         {% if talk.categories contains 'talks' %}
             <li>
                 <span class="date">{{ talk.date | date_to_string }}</span>
-                {{ talk.title }}
+                <a href="{{ talk.url }}" class="title">{{ talk.title }}</a>
             </li>
         {% endif %}
     {% endfor %}
