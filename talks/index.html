@@ -1,0 +1,19 @@
+---
+layout: default
+title: Mateusz Haligowski | talks
+category: talk
+---
+<div class="posts">
+    <h1>My talks</h1>
+    
+    <ul>
+    {% for talk in site.posts %}
+        {% if talk.categories contains 'talks' %}
+            <li>
+                <span class="date">{{ talk.date | date_to_string }}</span>
+                {{ talk.title }}
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>

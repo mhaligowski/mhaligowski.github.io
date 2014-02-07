@@ -1,0 +1,19 @@
+---
+layout: default
+title: Mateusz Haligowski | blog
+category: blog
+---
+<div class="posts">
+    <h1>Blog posts</h1>
+    
+    <ul>
+    {% for post in site.posts %}
+        {% if post.categories contains 'blog' %}
+            <li>
+                <span class="date">{{ post.date | date_to_string }}</span>
+                <a href="{{ post.url }}" class="title">{{ post.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>

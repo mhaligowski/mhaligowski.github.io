@@ -2,7 +2,6 @@
 layout: post
 title:  "Book review: The Well-Grounded Java Developer"
 date:   2014-01-17
-tags:   blog
 ---
 I was looking for something a bit more advanced on Java development, particularly low-level stuff like threads or bytecode. A quick search on the topic on my Safari Books Online account gave me ["Well-Grounded Java Developer"](http://www.manning.com/evans/) from Manning Books as on of the first results, and after skimming through the contents the position seemed suitable for my needs.
 
