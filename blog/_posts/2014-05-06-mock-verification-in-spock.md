@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Unexpected mock verification in Spock"
-date: 2014-03-02
+date: 2014-05-06
 ---
 
 I've been using [Mockito](https://code.google.com/p/mockito/) for quite a long time now and I consider myself rather fluent at that. Mock verification is not a case that I use often, but I can imagine a case for that. In Mockito I would just write a test like this one:
