@@ -4,13 +4,13 @@ body {
 }
 
 p {
-    font-family: neuton, serif;
-    font-size: 20px;
+    font-family: Montserrat, serif;
+    font-size: 13px;
 
 }
 
 h1, h2 {
-    font-family: source-sans-pro, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .content > div {
@@ -44,7 +44,7 @@ a:hover {
 }
 
 .sidebar .title span {
-    font-family: source-sans-pro, sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     text-transform: uppercase;
     text-align: center;
     color: black;
@@ -92,7 +92,7 @@ a:hover {
 }
 
 .posts li .date {
-    font-family: source-sans-pro, sans-serif;
+    font-family: "Montserrat", sans-serif;
     float: right;
     text-transform: uppercase;
     font-weight: light;
@@ -100,7 +100,7 @@ a:hover {
 }
 
 .posts li .title {
-    font-family: source-sans-pro, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: regular;
 }
@@ -114,6 +114,15 @@ a:hover {
  }
 
  .post_single p {
-    font-size: 20px;
     line-height: 160%;
  }
+
+code {
+    font-family: "Source Code Pro";
+    font-size: 11px;
+    line-height: 100%;
+}
+
+.highlight {
+    line-height: 110%;
+}
