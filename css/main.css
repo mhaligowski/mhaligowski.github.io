@@ -1,16 +1,17 @@
 body {
     padding: 15px;
     line-height: 160%;
+    font-size: 13pt;
 }
 
 p {
-    font-family: Montserrat, serif;
-    font-size: 13px;
+    font-family: serif;
+    font-size: 1em;
 
 }
 
 h1, h2 {
-    font-family: Montserrat, sans-serif;
+    font-family: sans-serif;
 }
 
 .content > div {
@@ -26,8 +27,13 @@ a:hover {
     color: #0088C3;
 }
 
-.sidebar {
-    line-height: 100%;
+.sidebar .photo {
+    width: 83.33%;
+    margin: 0px auto;
+}
+
+.sidebar .photo img {
+    width: 100%;
 }
 
 .sidebar a {
@@ -41,6 +47,7 @@ a:hover {
 .sidebar .title {
     margin: 15px auto;
     text-align: center;
+    line-height: 1em;
 }
 
 .sidebar .title span {
@@ -48,8 +55,7 @@ a:hover {
     text-transform: uppercase;
     text-align: center;
     color: black;
-    line-height: 0.8em;
-    font-size: 18px;
+    font-size: 1.72em;
 }
 
 .sidebar .title span.fname {
@@ -63,9 +69,8 @@ a:hover {
 
 .sidebar .social {
     text-align: center;
-    line-height: 1em;
     margin: 25px auto;
-    font-size: 18px;
+    font-size: 1.44em;
     letter-spacing: 5px;
 }
 
@@ -79,8 +84,9 @@ a:hover {
 
 .sidebar .menu li {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.44em;
     text-align: center;
+    line-height: .83em;
 }
 
 .posts ul {
@@ -92,7 +98,7 @@ a:hover {
 }
 
 .posts li .date {
-    font-family: "Montserrat", sans-serif;
+    font-family: sans-serif;
     float: right;
     text-transform: uppercase;
     font-weight: light;
@@ -100,8 +106,8 @@ a:hover {
 }
 
 .posts li .title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-family: sans-serif;
+    font-size: 1em;
     font-weight: regular;
 }
 
@@ -111,18 +117,10 @@ a:hover {
 
  .post_single .meta {
     margin: 0px;
- }
-
- .post_single p {
-    line-height: 160%;
+    font-size: 1.2em;
  }
 
 code {
     font-family: "Source Code Pro";
-    font-size: 11px;
-    line-height: 100%;
-}
-
-.highlight {
-    line-height: 110%;
+    font-size: .83em;
 }
