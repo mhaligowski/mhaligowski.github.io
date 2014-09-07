@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Programmer, know Thy tools!"
-date: 2014-06-01
+title: "Programmer, know thy tools!"
+date: 2014-09-07
 ---
 
-Being a programmer has undergone a lot of changes in a couple of recent years. The Agile Manifesto and the raise of Software Craftsmanship changed the way a programmer thinks about his work. The process of creating software became more customer-centric, with accent put on ability to change quicky. This lead to the importance of crafting quality code.
+Being a programmer has undergone a lot of changes in a couple of recent years. The [Agile Manifesto](http://agilemanifesto.org/) and the raise of the [Software Craftsmanship](http://manifesto.softwarecraftsmanship.org/) changed the way a programmer thinks about his work. The process of creating software became more customer-centric, with accent put on ability to change quicky. This led to the importance of crafting quality code.
 
-There was and still is some discussion on treating programming as a craft, with voices of such gurus as [Martin Fowler](http://martinfowler.com/bliki/CraftmanshipAndTheCrevasse.html|) or [Uncle Bob Martin](http://cleancoder.posterous.com/software-craftsmanship-things-wars-commandmen). Nevertheless, I still believe that just as any other professional should know his or her tools, programmers have their toolkits which they should be familiar with. Can you imagine a carpenter who cannot use a hammer properly or a surgeon who is not really comfortable with a scalpel?
+There was and still is some discussion on treating programming as a craft, with voices of such gurus as [Martin Fowler](http://martinfowler.com/bliki/CraftmanshipAndTheCrevasse.html|) or [Uncle Bob Martin](http://cleancoder.posterous.com/software-craftsmanship-things-wars-commandmen) among others. Nevertheless, I still believe that just as any other professional should know his or her tools, programmers have their toolkits which they should be familiar with and continously improve in them. Can you imagine a carpenter who cannot use a hammer properly or a surgeon who is not really comfortable with a scalpel?
 
 ## Keyboard
-We're writing a ton in our careers. I don't mean only the code itself, but also code-surrounding activities like documentation. Finally, with more customer and quality oriented approach to programming you find yourself writing lots of minor pieces, like email exchange with the customer, comments on the code review etc.
+We're writing a ton in our careers. I don't mean only the code itself, but also code-surrounding activities like documentation. Finally, with more customer- and quality-oriented approach to programming you find yourself writing lots of minor pieces, like email exchange with the customer, comments on the code review etc.
 
 Why on earth do I see so many software developers not touch typing? As typing on the keyboard is the most low-level skill required to do our job, I can hardly understand programmers who waste their time on finding the right keys and still making some mistakes. Typos are understable as long as you fix them immediately, but writing the whole paragraph and looking for the mistakes right after is a tremendous waste of time.
 
@@ -23,7 +23,7 @@ Development environment is the most obvious software utility that a programmer u
 Once you decide to use one particular IDE for programming, be sure to know it well. Most of thems have a very efficient set of extensions that increase your productivity. I'm speaking here of:
 * keyboard shortcuts, so you don't have to use mouse
 * snippets, so you don't have to write the same code over and over
-* refactoring utilities
+* refactoring utilities, so you can make your code better with less effort
 
 Any professional should know his tool well. Limit the use of mouse by using keyboard shortcuts, leverage the code assistant, use previously prepared snippets and templates, and refactor using the option provided. Not only will that improve your code quality, but also decrease the time you spend on writing a particular feature.
 
@@ -37,10 +37,10 @@ Coming from the Java world, it is hard to imagine any greenfield project without
 Obviously, this does not apply to Java only. The bottom line is that a developer should know what are the tools offered by the language, and by "tools" I mean testing libraries, utilities, web frameworks and database, among others. The more you know, the better.
 
 ## Other tools
-Being a programmer doesn't consist of programming only. The honorable mentions that you need to know are
+Being a programmer doesn't consist of programming only. The honorable mentions that you need to know are:
 
 ### Git (and/or other SCMs)
-You don't start a new project without creating a repository first nowadays. Even though simple for a basic usage, git (and other SCMs as well) offer lots of other features. You should be able to merge with solving the conficts, know the branching schemes, stashing, etc.
+You don't start a new project without creating a repository first nowadays. Even though simple for a basic usage, git (and other SCMs as well) offers lots of other features. You should be able to merge with solving the conficts, know the branching schemes, stashing, etc.
 
 ### Command line
 It's probably the reincarnation of "don't use the mouse" thing. Just learn to use your command line, whether it is the Windows cmd (why would you use it, though?),  Unix-standard bash, Unix-hipster zsh or Windows-hipster cygwin. Embrace the power of your operating system at the tips of your fingers.
