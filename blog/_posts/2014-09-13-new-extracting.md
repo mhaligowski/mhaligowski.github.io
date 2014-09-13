@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A new way of extracting values in AssertJ collections assertions"
-date:   2014-09-11  
+date:   2014-09-13  
 ---
 We've been using [AssertJ](www.assertj.org) in [Young Digital Planet](http://www.ydp.eu) in several Java projects already and we love it. It makes our tests much easier to write and read, mainly thanks to ease of writing custom assertions. The automatically generated assertions worked greatly as a basis for testing our domain classes, except for one problem. There often appears a need to assert a list of our entities by one of their field, and then continue on other assertions. The field usually is an enumerated value and looks like this:
 
@@ -30,7 +30,7 @@ assertThat(persons).extracting("gender").containsExactly(FEMALE, FEMALE, FEMALE,
 
 Even though quite handy, extracting by property name sucks badly in terms of object-oriented design. The fundamental reason is that any change in the class `Person` would cause all the test cases to fail due to property of invalid name. While it does not require many changes when you have a couple of test cases, introducing the change in couple hundreds is hell.
 
-You could always write your own assertions for each of the field, but it is a little overkill. Instead of that, I proposed a change in the AssertJ to appear in version 1.7.0. The change introduced a single-method interface `Extractor` (you could call it functional in Java 8), which handles the extraction of required property, but also can do any other transformation that is required. Thanks to that there's no longer need to write a whole set of assertions, just a small class that extracts the tested property. Now, the previous example would look like this:
+You could always write your own assertions for each of the field, but it is a little overkill. Instead of that, I proposed a change in the AssertJ to appear in version 1.7.0. The change introduced a Single Abstract Method (SAM) interface `Extractor` (you could call it functional if you were using Java 8), which handles the extraction of required property, but also can do any other transformation that is required. Thanks to that there's no longer need to write a whole set of assertions, just a small class that extracts the tested property. Now, the previous example would look like this:
 
 {% highlight java %}
 public class GenderExtractor implements Extractor<Person, Gender> {
