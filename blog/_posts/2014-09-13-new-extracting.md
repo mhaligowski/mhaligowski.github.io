@@ -3,7 +3,7 @@ layout: post
 title:  "A new way of extracting values in AssertJ collections assertions"
 date:   2014-09-13  
 ---
-We've been using [AssertJ](www.assertj.org) in [Young Digital Planet](http://www.ydp.eu) in several Java projects already and we love it. It makes our tests much easier to write and read, mainly thanks to ease of writing custom assertions. The automatically generated assertions worked greatly as a basis for testing our domain classes, except for one problem. There often appears a need to assert a list of our entities by one of their field, and then continue on other assertions. The field usually is an enumerated value and looks like this:
+We've been using [AssertJ](http://www.assertj.org) in [Young Digital Planet](http://www.ydp.eu) in several Java projects already and we love it. It makes our tests much easier to write and read, mainly thanks to ease of writing custom assertions. The automatically generated assertions worked greatly as a basis for testing our domain classes, except for one problem. There often appears a need to assert a list of our entities by one of their field, and then continue on other assertions. The field usually is an enumerated value and looks like this:
 
 {% highlight java %}
 public enum Gender {
