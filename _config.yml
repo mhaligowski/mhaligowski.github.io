@@ -1,8 +1,8 @@
 name: Mateusz Haligowski
 description: personal site & blog
 url: http://mhaligowski.github.io
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 gravatar_url: http://www.gravatar.com/avatar/106bc4d1c66b41a5c98636ab0fb2771e
 github_username: mhaligowski
 twitter_username: mhaligowski
