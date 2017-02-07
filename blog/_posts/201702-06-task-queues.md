@@ -1,22 +1,22 @@
 ---
 layout: post
 title: "Integrating Google App Engine services with task queues"
-date: 2017-01-06
+date: 2017-02-06
 ---
 
-Whatever application you are working on, when it reaches some size it is beneficial to split it into couple of smaller ones, often called "microservices". This allows you for better management of the resources in each, more transparent architecture (usually) and independent scaling of your components. If you want to know more about the benefits of microservices, Martin Fowler wrote a [great piece](https://martinfowler.com/articles/microservices.html) on them.
+Whatever application you are working on, when it reaches some size it is beneficial to split it into microservices, i.e. a couple of smaller ones. This allows you for better management of the resources in each, (usually) more transparent architecture and independent scaling of your components. Microservices are a hot topic nowadays, and if you want to know more about them, Martin Fowler wrote a [great piece](https://martinfowler.com/articles/microservices.html).
 
-Microservices communicate other usually using an HTTP protocol, but there is a bunch of situation when simple HTTP calls are taking too long, or there are many steps that you need to take. In cases like this, you may need to use [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In Google Cloud the most obvious option for that is [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/overview), but a very often overlooked option for messaging between a bunch of App Engine modules is [task queues](https://cloud.google.com/appengine/docs/python/taskqueue/).
+Microservices communicate with each other usually using an HTTP protocol, but there is a bunch of situations when simple HTTP calls are taking too long, or there are many steps that you need to take. In cases like this, you may need to use [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In Google Cloud the most obvious option for that is [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/docs/overview), but a very often overlooked feature for messaging between a bunch of App Engine services is [task queues](https://cloud.google.com/appengine/docs/python/taskqueue/).
 
 ## What are task queues
-Task queues are a Google App Engine-specific option for performing some part of your work, usually one that takes some time to perform or one that is not directly connected with the front-end application. If you are not familiar with pub/sub pattern, just think of them as of some messages being sent by one of the modules, and being received (and processed) by another.
+Task queues are a Google App Engine-specific option for performing some part of your work, usually one that takes some time to process or one that is not directly connected with the front-end application. If you are not familiar with pub/sub pattern, just think of them as of some messages being sent by one of the modules, and being received (and processed) by another.
 
 If you are still not convinced, then let me mention one more benefit of task queues: they are usually way easier to setup, compared to whatever language or framework you are using. When you want to run some background jobs in, say, Django, the recommended way is to use [Celery](http://www.celeryproject.org/). This requires setting up some backend and additional configuration. In Java, you usually end up using some futures mechanism (I might be wrong here though, I usually ended up setting up a queue myself). Setting up a task queue in App Engine requires to add a single file in your default App Engine application.
 
 Google App Engine offers two types of task queues. The first one is *push queues*, as in "push this message away from me", and the other one is *pull queues*, as in "make this task available for pulling". I'll give some use cases for both types, and show how to use them.
 
 ## Push queues
-Adding a task to a push queue is basically saying "I need this to be done". I first came across them when writing an RSS aggregator. My use case was: "I have a bunch of URLs of feeds to get, I want it to be run in a different module, probably in parallel". If you have a similar situation, i.e. you have a large task to be done and you want it to be done somewhere else, go ahead and use push queues.
+Adding a task to a push queue is basically saying "I need this to be done". I first came across them when writing an RSS aggregator. My use case was: "I have a bunch of URLs of feeds to get, I want them to be processed in a different module, one at a time, probably in parallel". If you have a similar situation, i.e. you have a relatively large task to be done and you want it to be done somewhere else, go ahead and use push queues.
 
 First, you need to create a push queue. In order to do that, **in the default application of your project** (I mean it, I spent couple of hours trying to figure out why it doesn't work), you need to create `queue.yaml` (or `queue.xml` for Java) file, which looks like this:
 
