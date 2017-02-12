@@ -1,5 +1,3 @@
-Release as early as possible, release often
-===========================================
 If you are a professional programmer or a startuper you probably came across the rule "Release early, release often". In the world of startups the implementation of that rule is early customer evaluation and building an MVP (Most-Viable-Product). In techies world a whole bunch of Continous Integration have been emerging since the beginning of the century after being presented as a best practice of XP.
 
 >But by a year later, as Linux became widely visible, it was clear that something different and much healthier was going on there. Linus's open development policy was the very opposite of cathedral-building. Linux's Internet archives were burgeoning, multiple distributions were being floated. And all of this was driven by an unheard-of frequency of core system releases.
