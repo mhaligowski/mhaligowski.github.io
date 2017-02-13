@@ -4,15 +4,15 @@ title: "Hello, Google Cloud Functions"
 date: 2005-02-01
 ---
 
-Serverless is getting much attention in the cloud space recently, and it's not a surprise why. By introducing AWS Lambda, Amazon allowed to write new services in the blink of an eye, without having to worry about servers, scaling, and even about the underlying framework. 
+Serverless is getting much attention in the cloud space recently, and it's easy to understand why. By introducing AWS Lambda, Amazon allowed to write new services in the blink of an eye, without having to worry about servers, scaling, and even about the underlying framework.
 
-Developers all over the world fell in love with Lambdas, and soon new extensions followed. Amazon's competitors in the cloud market followed quickly, first with Microsoft Azure Functions, and now Google introduced Beta of their Google Cloud Functions.
+Developers all over the world fell in love with Lambdas, and soon new extensions followed. Amazon's competitors in the cloud market responded quickly, first with Microsoft Azure Functions, and now Google is introducing public Beta of their [Google Cloud Functions](https://cloud.google.com/functions/).
 
-I was lucky enough to gain access to the alpha version of the product, and so I present you a very short introduction on how to start with Google Cloud Functions.
+I was lucky enough to gain access to the alpha version of the product. I was able to play a little with that, and so I present you a very short introduction on how to start with Google Cloud Functions.
 
-Most of the things I present here can be done from the Google Cloud browser UI, but I prefer working from my terminal - I just prefer hitting keys and seeing what is happening, rather than watching progress bar, no matter how fancy it is.
+Most of the things I present here can be done from the Google Cloud browser UI, but I prefer working from my terminal - I'd just rather hit keys on my keyboard and see what is happening instantly, than watch progress bar, no matter how fancy it is.
 
-I assume that you already have a Google Cloud account, along with created project and installed Google Cloud SDK in your account. Since Cloud Functions are in beta now, you will need beta components in your SDK installed, so go ahead and type in your terminal:
+I assume that you already have a Google Cloud account, along with a created project and installed Google Cloud SDK in your account. Since Cloud Functions are in beta now, you will need beta components in your SDK installed, so go ahead and type in your terminal:
 
 ```
 $ gcloud components install beta
@@ -49,7 +49,7 @@ exports.hello = function hello(req, res) {
 
 It's not hard to guess what this code does. In case you're wondering, the `req` and `res` object follow the request and response object, as defined in [Express.js](http://expressjs.com/en/4x/api.html). 
 
-Let's deploy the code now. When you are deploying from local directory, Google Cloud Functions requires you to use a deployment bucket in Google Cloud Storage service.  This is a little inconvenient, but you can also deploy directly from a git repository. For the purpose of this post, let's stick to the first option, so create a deployment bucket:
+The code is written, let's deploy it now. When you deploy Cloud Function from a local directory, it is required to have a deployment bucket in Google Cloud Storage service.  This is a little inconvenient, but thankfully Google Cloud also offers deploying directly from a git repository. For the purpose of this tutorial, let's stick to the first option, so create a deployment bucket:
 
 ```
 $ gsutil mb gs://hello-deployments-123456
@@ -82,7 +82,7 @@ $ gcloud functions describe hello
 
 ... [[ some output here ]]
 httpsTrigger:
-  url: [[ your url here]]
+  url: https://[[ your url here]]
 ... [[ some other output ]]
 ```
 
@@ -93,6 +93,6 @@ $ curl https://us-central1-your-project-123456.cloudfunctions.net/hello
 Hello, Functions
 ```
 
-And that's it! You created, deployed, and tested your very first Cloud Function. Of course, there's way more to it. First, I haven't mentioned about the limits, but they are pretty similar to what competitors offer: you can define how much memory your function requires, and how long will it take to run.
+And that's it! You created, deployed, and tested your very first Cloud Function. What you just did is just the tip of an iceberg. First, I haven't mentioned about the limits, but they are pretty similar to what competitors offer: you can define how much memory your function requires, and how long will it take to run.
 
-In my example, I've shown how to create a basic HTTP trigger, but Google Cloud allows you to have other triggers as well: Google Datastore rows actions, Cloud Storage files, Google Pub/Sub notifications or Firebase actions. I haven't tried all of them yet, but will definitely do that. Have fun tinkering!
+In my example, I've shown how to create a basic HTTP trigger, but Google Cloud allows you to have other triggers as well: Google Datastore rows actions, Cloud Storage files, Google Pub/Sub notifications or Firebase actions. I haven't tried all of them yet, but will definitely do that. Have fun tinkering, and let me know whether there's something more to cover!
