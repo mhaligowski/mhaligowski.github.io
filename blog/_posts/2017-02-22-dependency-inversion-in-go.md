@@ -1,14 +1,20 @@
-I've been playing with Go language for a couple of months now, and I'm getting more and more excited about it. All my professional career I have considered myself a Java programmer in the first place, proficient enough in other programming languages and technologies, so entering the world of Go was a little shock for my object-orientation sense. The structs and interfaces with runtime polymorphism (i.e. a struct implements an interface when it implements all the method an interface defines, without a need for an explicit declaration) force you to think about structuring your code a little differently.
+---
+layout: post
+title: "Dependency Inversion in Go"
+date: 2017-02-22
+---
 
-For couple of years now, I've been trying to structure my code following SOLID principles, so that my code is to understand, test, expand and maintain. These principles have been introduced with object-oriented programming in mind, and so most of the reference you find over the Internet is for object-oriented languages like Java, C# o r C++. With slight alterations, it was pretty easy to apply them in Python, Ruby or JavaScript code, although it felt unnatural at some times. But when I started working on a little more side project, and wanted to have it tested properly in Go, I had to stop and think a little.
+I've been playing with [Go](https://golang.org/) language for a couple of months now, and I'm getting more and more excited about it. All my professional career I have considered myself a Java programmer in the first place, proficient enough in other programming languages and technologies. Entering the rather low-level world of Go was a little shock for my object-orientation sense. The structs and interfaces with runtime polymorphism (i.e. a struct implements an interface when it implements all the method an interface defines, without a need for an explicit declaration) make you think about structuring your code a little differently.
 
-The principle that is used probably the most widely and gives most benefits when applying is Dependency Inversion Principle. The most in-depth explanation is presented by [Uncle Bob Martin](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod), and it goes like this:
+For couple of years now, I've been trying to structure my code following SOLID principles. I wanted my code to be understood, tested, extended and maintained easily. These principles were introduced with object-oriented programming in mind, and so most of the reference you find over the Internet is for object-oriented languages like Java, C# o r C++. With slight alterations, it was pretty easy to apply them in Python, Ruby or JavaScript code, even though it felt unnatural at some times. But when I started working on a bit larger side project, and wanted to have it tested properly in Go, I had to take a step back and think a little.
+
+The SOLID principle that is used probably the most widely and gives most benefits when applying is Dependency Inversion Principle. The most in-depth explanation is presented by [Uncle Bob Martin](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod), and it goes like this:
 
 > A. High level modules should not depend upon low level modules. Both should depend upon abstractions.
 
 > B. Abstractions should not depend upon details. Details should depend upon abstractions.
 
-What this means, is your code, you should not rely on concrete implementations, rather on the interfaces that are defined for these implementations. Take a look at this Java example:
+What this means, is that you should not rely on concrete implementations, rather on the interfaces that are defined for these implementations. Take a look at this Java example:
 
 {% highlight java %}
 
@@ -30,7 +36,7 @@ class RESTService implements ExternalService {
 
 This class would probably would do its job when run, but it introduces a couple of problems. First, it's pretty hard to write a fast, reliable test for this class. Since it's always relying on the concrete implementation that makes an external call, you can't guarantee the results are always the same, and certainly not controlled by you. Also, if you want to provide another implementation instead of REST service, you can't really do that.
 
-The code above violates the Dependency Inversion Principle: high-level module (`MyService`) depends on a low-level module (`RESTService`), and the `MyService` class defends upon detail (`RESTService`). Fortunately, it is usually easy to fix that problem in Java:
+The code above violates the Dependency Inversion Principle: high-level module (`MyService`) depends on a low-level module (`RESTService`), and the `MyService` class depends upon detail (`RESTService`). Fortunately, it is usually easy to fix that problem in Java:
 
 {% highlight java %}
 
@@ -67,7 +73,7 @@ func handleGet(w http.ResponseWriter, r *http.Request) {
 }
 {% endhighlight %}
 
-I immediately ran into problems when trying to test that code. It was bound to use Cloud Datastore implementation, so if I couldn't run the function without access to Google Cloud. I obviously violated Dependency Inversion Principle, and needed to fix that. Fortunately, the awesome types system in Go made it really easy: 
+I immediately ran into problems when trying to write unit tests for that code. It was bound to use Cloud Datastore implementation, so if I couldn't run the function without access to Google Cloud. I obviously violated Dependency Inversion Principle, and needed to fix that. Fortunately, the awesome types system in Go made it really easy: 
 
 {% highlight go %}
 type itemFetcher func(r *http.Request) ([]Item, error)
