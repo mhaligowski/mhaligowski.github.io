@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Template for running React app in Google AppEngine"
+date: 2017-04-05
+---
+
 I've been playing with [Google Cloud](http://cloud.google.com/) for some time now, mainly to compare it with what Amazon has to offer. In general, the experience with Google Cloud is very enjoyable, and feels much more developer-friendly than enterprise-friendly than [AWS](http://aws.amazon.com/). There were some things that are more mature and more convenient in Amazon's cloud, like DynamoDB with it's pricing model or messaging with SNS, SQS and Kinesis. One thing that I feel is much better in Google's cloud platform is AppEngine, the Platform-as-a-Service solution. It feels more complete than Elastic Beanstalk, and whole process is more straightforward.
 
 The whole point of me playing with the cloud solutions was decreasing the time-to-market of my projects. Very often I have a seemingly great idea, but the execution takes forever. I lose interest and the project dies before even anyone has a chance to use that. I was constantly trying to to cut some corners in the implementation, especially on the frontend side. After spending some time with AngularJS 1.x I gave ReactJS a try, and immediately got hooked. It's not as explicit as AngularJS, but still it provides some structure to the Javascript code. The last problem I had was the deployment of a React application to the cloud. I tried deploying to the Google Cloud Storage (as well as S3), but I ran into problems I described in one the earlier posts. I decided to run my JS frontend as a Google AppEngine module, but not without some hacks.
