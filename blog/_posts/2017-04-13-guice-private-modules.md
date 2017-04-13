@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Encapsulation in Guice with Private Modules"
-date: 2017-04-14
+date: 2017-04-13
 ---
 
 A couple of weeks ago I was talking about the Reuse/Release Principle, which states that the unit of reuse is also the unit of release - whatever you want others to reuse, you need to release with a predictable schedule. The rule doesn't tell much about the code itself, different languages and frameworks will require different approaches to achieving that. On one hand you want to package all the classes that are meant to be reused, on the other hand you don't want the consumers hurt themselves with lower levels of abstractions or depend on something that is likely to change in the future.
