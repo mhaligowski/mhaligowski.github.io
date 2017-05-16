@@ -8,3 +8,6 @@ github_username: mhaligowski
 twitter_username: mhaligowski
 linkedin_username: mhaligowski
 resume_url: https://dl.dropboxusercontent.com/u/9035816/Mateusz%20Haligowski%20CV%20%5Ben%5D.pdf
+gems:
+    - jekyll-sitemap
+
