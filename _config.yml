@@ -7,7 +7,8 @@ highlighter: rouge
 gravatar_url: https://www.gravatar.com/avatar/106bc4d1c66b41a5c98636ab0fb2771e
 github_username: mhaligowski
 twitter_username: mhaligowski
-twitter:username: mhaligowski
+twitter:
+    - username: mhaligowski
 linkedin_username: mhaligowski
 social:
     name: Mateusz Haligowski
