@@ -20,4 +20,5 @@ resume_url: https://dl.dropboxusercontent.com/u/9035816/Mateusz%20Haligowski%20C
 gems:
     - jekyll-sitemap
     - jekyll-seo-tag
+    - jekyll-feed
 
