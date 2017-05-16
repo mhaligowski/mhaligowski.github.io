@@ -1,13 +1,23 @@
-name: Mateusz Haligowski
-description: personal site & blog
-url: http://mhaligowski.github.io
+name: Mateusz Haligowski's personal blog :: programming, cloud and beyond
+author: Mateusz Haligowski
+description: personal site & blog of Mateusz Haligowski. Software engineering and craftsmenship, design and architecture, cloud services and applications bootstrapping.
+url: https://mhaligowski.github.io
 markdown: kramdown
 highlighter: rouge
 gravatar_url: https://www.gravatar.com/avatar/106bc4d1c66b41a5c98636ab0fb2771e
 github_username: mhaligowski
 twitter_username: mhaligowski
+twitter:username: mhaligowski
 linkedin_username: mhaligowski
+social:
+    name: Mateusz Haligowski
+    links:
+        - https://www.facebook.com/mateusz.haligowski
+        - https://twitter.com/mhaligowski
+        - https://www.linkedin.com/in/mhaligowski
+        - https://github.com/mhaligowski/
 resume_url: https://dl.dropboxusercontent.com/u/9035816/Mateusz%20Haligowski%20CV%20%5Ben%5D.pdf
 gems:
     - jekyll-sitemap
+    - jekyll-seo-tag
 
