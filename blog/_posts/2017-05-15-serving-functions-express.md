@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Serving with both Google Cloud Functions and Express"
+title:  "Mixing Google Cloud Functions and Express"
 date:   2017-05-15
 ---
 
@@ -20,6 +20,7 @@ module.exports = function hello(req, res) {
 And the code to serve that is a regular Express boilerplate: 
 
 {% highlight js %}
+// server.js
 var express = require('express');
 var app = express();
 
