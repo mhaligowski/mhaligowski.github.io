@@ -16,7 +16,7 @@ Let's start with the business logic part (I'm omitting imports, constructors etc
 // CustomerDao.java
 package business;
 
-interface CustomerDao {
+public interface CustomerDao {
     Collection<Customer> getCustomers();
 }
 
