@@ -18,7 +18,7 @@ social:
         - https://www.linkedin.com/in/mhaligowski
         - https://github.com/mhaligowski/
 resume_url: https://dl.dropboxusercontent.com/u/9035816/Mateusz%20Haligowski%20CV%20%5Ben%5D.pdf
-gems:
+plugins:
     - jekyll-sitemap
     - jekyll-seo-tag
     - jekyll-feed
