@@ -5,3 +5,4 @@ mhaligowski.github.io.sublime-project
 Gemfile.lock
 *.swp
 .swo
+.DS_Store
