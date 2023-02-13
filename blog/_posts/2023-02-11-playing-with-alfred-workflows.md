@@ -22,7 +22,7 @@ In one of the recent versions of MacOS (and iOS, for that matter) Apple introduc
 
 There was one problem with it, though. The function is buried pretty deep in the Accessibility features (both MacOS and iOS), and it seems that Alfred doesn't know yet how to switch that. Thankfully, some digging in the Apple forums gave me a bash-friendly answer on flipping the background sounds on and off:
 
-```
+```bash
 defaults write com.apple.ComfortSounds "comfortSoundsEnabled" -bool "false"
 launchctl kill SIGHUP gui/501/com.apple.accessibility.heard
 ```
@@ -33,7 +33,7 @@ The first line enables or disables the Background Sounds (for some reason called
 
 This is what my workflow actually does. The screenshot is below:
 
-
+![Image](/assets/images/2023-02-12-alfred-workflow.png){:.ui .image .fluid }
 
 ## Keyword steps
 
