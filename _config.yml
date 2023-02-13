@@ -8,18 +8,17 @@ gravatar_url: https://www.gravatar.com/avatar/106bc4d1c66b41a5c98636ab0fb2771e
 github_username: mhaligowski
 twitter_username: mhlgio
 twitter:
-    - username: mhlgio
+  - username: mhlgio
 linkedin_username: mhaligowski
 social:
-    name: Mateusz Haligowski
-    links:
-        - https://www.facebook.com/mateusz.haligowski
-        - https://twitter.com/mhlgio
-        - https://www.linkedin.com/in/mhaligowski
-        - https://github.com/mhaligowski/
+  name: Mateusz Haligowski
+  links:
+    - https://www.facebook.com/mateusz.haligowski
+    - https://twitter.com/mhlgio
+    - https://www.linkedin.com/in/mhaligowski
+    - https://github.com/mhaligowski/
 resume_url: https://dl.dropboxusercontent.com/u/9035816/Mateusz%20Haligowski%20CV%20%5Ben%5D.pdf
 plugins:
-    - jekyll-sitemap
-    - jekyll-seo-tag
-    - jekyll-feed
-
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
