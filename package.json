@@ -1,0 +1,23 @@
+{
+  "name": "mhaligowski.github.io",
+  "version": "1.0.0",
+  "description": "mhaligowski.github.io =====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhaligowski/mhaligowski.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhaligowski/mhaligowski.github.io/issues"
+  },
+  "homepage": "https://github.com/mhaligowski/mhaligowski.github.io#readme",
+  "devDependencies": {
+    "husky": "^7.0.0"
+  }
+}
